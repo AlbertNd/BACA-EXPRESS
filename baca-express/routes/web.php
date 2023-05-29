@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[AcceuilController::class,'BasePageAcceuil'])->name('Home');
+Route::get('/',[AcceuilController::class,'PageAceuil'])->name('Home');
 Route::get('/Home',[AcceuilController::class,'PageAceuil'])->name('Home');
