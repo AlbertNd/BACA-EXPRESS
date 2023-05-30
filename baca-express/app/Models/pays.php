@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class pays extends Model
 {
     use HasFactory;
+    protected $fillable =['nom'];
 
     public function ville():HasMany {
         return $this-> hasMany(ville::class);

@@ -15,6 +15,8 @@
     </div>
     <div>
       @yield('Acceuil')
+      @yield('horaire')
+      @yield('reservation')
     </div>
   </div>
   <footer class="bg-green-500 py-5 ">
