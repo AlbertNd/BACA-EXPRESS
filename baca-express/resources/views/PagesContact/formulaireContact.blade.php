@@ -8,7 +8,7 @@
     </div>
     <div class="flex">
         <!-- Description -->
-        <div class="w-full shadow">
+        <div class="w-full shadow rounded">
             @include('PagesContact.textFormulaireContact')
         </div>
         <!-- formulaire de contact -->
