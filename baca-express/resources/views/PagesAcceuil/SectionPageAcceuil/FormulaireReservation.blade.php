@@ -1,6 +1,8 @@
+@vite('resources/js/FormulaireRecherche.js')
+
 <div class="">
     <div class="text-center pt-5">
-        <h1 class="uppercase text-lg text-green-500 font-extrabold">Reservez votre billet et voyagez avec BacaExpress</h1>
+        <h1 class="uppercase text-lg text-green-500 font-extrabold">Reservez votre billet et voyagez avec Baca-Express</h1>
     </div>
     <div class="p-2 sm:p-10 w-full">
         <!-- Le formulaire de reservation -->
@@ -17,9 +19,8 @@
                         <!--Ville départ -->
                         <div class="w-full">
                             <label for="depart">De</label> <br>
-
                             <select name="depart" id="depart" class="w-full">
-                                @foreach($villeDepart as $villes)    
+                                @foreach($villeDepart as $villes)
                                 <option value="{{$villes -> nom}}">
                                     {{$villes -> nom}}
                                 </option>
@@ -48,25 +49,27 @@
                                     <label for="dateDepart">Départ</label> <br>
                                     <input type="date" name="dateDepart" id="" value="{{date('Y-m-d')}}" class="border border-gray-300 rounded w-full">
                                 </div>
-                            </div>
-                            <!--Nombre de passager -->
-                            <div class="w-full">
-                                <div class="">
-                                    <label for="passagers">Voyageurs</label> <br>
-                                    <select name="passagers" id="passagers" class="border border-gray-300 rounded w-full">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="contactPassagers">+10</option>
-                                    </select>
+                                <div id="statuImput" class="w-full" style="display:none;">
+                                    <label for="dateRetour">Retour</label> <br>
+                                    <input type="date" name="dateRetour" id="" value="{{date('Y-m-d')}}" class="border border-gray-300 rounded w-full">
                                 </div>
                             </div>
+                            <!--Nombre de passager -->
+                           
+                                <div class="w-full flex items-end bg-red-500 mx-auto">
+                                    <div class="flex items-center">
+                                        <div class="">
+                                            <a href="#" class="px-2 py-2 border border-gray-300" id="down"> &#x2212; </a>
+                                        </div>
+                                        <div class="flex justify-center">
+                                            <input type="number" name="passagers" id="nombrePlace" value="0" class="w-full text-center">
+                                        </div>
+                                        <div>
+                                            <a href="#" class="px-2 py-2 border border-gray-300" id="up"> &#x2b; </a>
+                                        </div>
+                                    </div>
+                                </div>
+                           
                             <!--button recherche -->
                             <div class="w-full flex items-end">
                                 <div class="w-full p-2 sm:p-0">
@@ -80,3 +83,23 @@
         </form>
     </div>
 </div>
+
+<!-- Le script javascript pour le controle des affichage des numero de tva et nom de la societe -->
+
+<script>
+    var nombrePlace = 0;
+
+    function Comptage() {
+        nombrePlace++;
+        document.getElementById("nombrePlace").value = nombrePlace;
+
+    }
+
+    function Decomptage() {
+        nombrePlace--;
+        document.getElementById("nombrePlace").value = nombrePlace;
+
+    }
+    document.getElementById("up").addEventListener("click", Comptage);
+    document.getElementById("down").addEventListener("click", Decomptage);
+</script>

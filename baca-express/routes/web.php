@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AcceuilController;
+use App\Http\Controllers\Apropos;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +26,10 @@ Route::post('/Home',[AcceuilController::class,'Recherche']);
 Route::get('/Horaire',[AcceuilController::class,'Recherche'])->name('horaire');
 
 Route::get('/Reservation',[ReservationController::class,'AfficherReservation'])->name('reservation');
+
+Route::get('/Apropos',[Apropos::class,'Apropos'])->name('apropos');
+
+// contact
+
+Route::get('/Contact',[ContactController::class,'FormulaireContact'])-> name('contact');
+

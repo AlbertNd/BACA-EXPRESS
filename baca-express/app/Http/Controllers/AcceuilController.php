@@ -10,7 +10,8 @@ use Illuminate\Http\Request;
 class AcceuilController extends Controller
 {
     public function BasePageAcceuil()
-    {
+    {        
+
         return view('Home');
     }
     public function PageAceuil()
@@ -31,10 +32,14 @@ class AcceuilController extends Controller
         $nombre = $request -> passagers;
         $destination = $request -> destination;
         $depart = $request -> depart;
+        $DateUtilisateur = $request -> dateDepart;
+        // Recupération du pays de depart dansla db
         $PaysDepart =ville::select('pays_id')->where('nom',$villeDeDepart)->get();
         $IdPaysDepart = $PaysDepart[0]-> pays_id;
-        $DateUtilisateur = $request -> dateDepart;
-        //$IdVilDateSupDateUti = Horaire::select('dateDepart')->where('dateDepart','>',$DateUtilisateur)->get();
+
+        // Recupération des superieur ou egale à celle d'aujourdhuit dans la db 
+
+        $IdVilDateSupDateUti = Horaire::select('dateDepart')->where('dateDepart','>=',$DateUtilisateur)->get();
         
         
         //dd($IdVilDateSupDateUti);
@@ -42,13 +47,11 @@ class AcceuilController extends Controller
         return view('InfoHoraire.Horaire', [
             'pays' => pays::with([
                 'ville' => function ($q) use ($villeDeDepart) {
+
                     $q->where('nom', $villeDeDepart);
                 },
             ])->where('id',$IdPaysDepart)->get(),
-            
-            'villest' => ville::with(['horaire' => function($p) use($DateUtilisateur){
-                $p->where('dateDepart','>=',$DateUtilisateur);
-            }])->where('nom',$villeDeDepart)->get(),
+
             
 
 
