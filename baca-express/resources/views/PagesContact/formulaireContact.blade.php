@@ -6,7 +6,7 @@
     <div class="flex justify-center items-center p-10">
         <h1 class="font-thin uppercase text-2xl text-green-800">Besoin d'aide ? Contactez-nous sans hésiter !</h1>
     </div>
-    <div class="flex">
+    <div class="flex space-x-2 ">
         <!-- Description -->
         <div class="w-full shadow rounded">
             @include('PagesContact.textFormulaireContact')

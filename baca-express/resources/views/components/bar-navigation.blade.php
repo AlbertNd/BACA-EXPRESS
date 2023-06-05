@@ -16,20 +16,19 @@
                     <!--Liens pour les services -->
                     <li class="inline-block py-5 px-2 rounded hover:bg-gray-400 hover:bg-opacity-25"><a href="#">Services <span> &#8595</span> </a>
                         <!-- Lien de service dropdown -->
-                        <ul class="dropdown justify-center mt-4 border border-gray-300 rounded p-5 bg-white">
-                            <li class="px-3 py-3 hover:bg-gray-400 hover:bg-opacity-25 rounded"><a href="#">Tous les services</a></li>
-                            <li class="px-3 py-3 hover:bg-gray-400 hover:bg-opacity-25 rounded"><a href="#">Services à bord</a></li>
-                            <li class="px-3 py-3 hover:bg-gray-400 hover:bg-opacity-25 rounded"><a href="#">Gerer ma reservation</a></li>
-                            <li class="px-3 py-3 hover:bg-gray-400 hover:bg-opacity-25 rounded">Sécurité<a href="#"></a></li>
+                        <ul class="dropdown justify-center mt-4 p-2 bg-green-500">
+                            <li class="px-3 py-3 bg-green-500 hover:bg-gray-400 hover:bg-opacity-25 "><a href="{{route('service')}}">Tous les services</a></li>
+                            <li class="px-3 py-3 hover:bg-gray-400 hover:bg-opacity-25 "><a href="#">Services à bord</a></li>
+
                         </ul>
                     </li>
                     <li class="inline-block flex justify-centerrounded hover:bg-gray-400 hover:bg-opacity-25"><a href="{{route('contact')}}" class=" py-5 px-2 ">Contact</a></li>
                     <!-- Langue lorsque l'ecran est a md -->
                     <li class="inline-block lg:hidden py-5 px-2"><a href="#"> Langue <span> &#8595</span></a>
-                        <ul class="dropdown mt-2 border border-gray-300 rounded p-2 bg-white">
-                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25 rounded"><a href="#"><span>&#x1F1EB;&#x1F1F7;</span> Francais</a></li>
-                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25 rounded"><a href="#"><span>&#x1F1EC;&#x1F1E7;</span> Anglais</a></li>
-                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25 rounded"><a href="#"><span>&#x1F1F8;&#x1F1F3;</span> Wolof </a></li>
+                        <ul class="dropdown mt-2 p-2 bg-green-500">
+                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25"><a href="#"><span>&#x1F1EB;&#x1F1F7;</span> Francais</a></li>
+                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25"><a href="#"><span>&#x1F1EC;&#x1F1E7;</span> Anglais</a></li>
+                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25"><a href="#"><span>&#x1F1F8;&#x1F1F3;</span> Wolof </a></li>
                         </ul>
 
                     </li>
@@ -39,10 +38,10 @@
             <div class="hidden lg:flex justify-center items-center">
                 <ul>
                     <li class="inline-block py-5 px-2"><a href="#"> Langue <span> &#8595</span></a>
-                        <ul class="dropdown mt-2 border border-gray-300 rounded p-2 bg-white">
-                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25 rounded"><a href="#"><span>&#x1F1EB;&#x1F1F7;</span> Francais</a></li>
-                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25 rounded"><a href="#"><span>&#x1F1EC;&#x1F1E7;</span> Anglais</a></li>
-                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25 rounded"><a href="#"><span>&#x1F1F8;&#x1F1F3;</span> Wolof </a></li>
+                        <ul class="dropdown mt-2 p-2 bg-green-500">
+                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25"><a href="#"><span>&#x1F1EB;&#x1F1F7;</span> Francais</a></li>
+                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25"><a href="#"><span>&#x1F1EC;&#x1F1E7;</span> Anglais</a></li>
+                            <li class="px-2 py-2 hover:bg-gray-400 hover:bg-opacity-25"><a href="#"><span>&#x1F1F8;&#x1F1F3;</span> Wolof </a></li>
                         </ul>
 
                     </li>

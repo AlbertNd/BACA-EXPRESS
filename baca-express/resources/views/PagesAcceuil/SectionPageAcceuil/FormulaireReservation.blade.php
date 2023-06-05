@@ -1,4 +1,4 @@
-@vite('resources/js/FormulaireRecherche.js')
+
 
 <div class="">
     <div class="text-center pt-5">
@@ -44,7 +44,7 @@
                     <div class="w-full">
                         <div class="sm:flex sm:space-x-2">
                             <!--Date de depart et date de retour -->
-                            <div class="w-full">
+                            <div class="flex w-full">
                                 <div class="w-full">
                                     <label for="dateDepart">Départ</label> <br>
                                     <input type="date" name="dateDepart" id="" value="{{date('Y-m-d')}}" class="border border-gray-300 rounded w-full">
@@ -56,17 +56,13 @@
                             </div>
                             <!--Nombre de passager -->
                            
-                                <div class="w-full flex items-end bg-red-500 mx-auto">
+                                <div class="w-full flex items-end mx-auto">
                                     <div class="flex items-center">
-                                        <div class="">
-                                            <a href="#" class="px-2 py-2 border border-gray-300" id="down"> &#x2212; </a>
-                                        </div>
+                                        
                                         <div class="flex justify-center">
                                             <input type="number" name="passagers" id="nombrePlace" value="0" class="w-full text-center">
                                         </div>
-                                        <div>
-                                            <a href="#" class="px-2 py-2 border border-gray-300" id="up"> &#x2b; </a>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                            

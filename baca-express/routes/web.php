@@ -4,6 +4,7 @@ use App\Http\Controllers\AcceuilController;
 use App\Http\Controllers\Apropos;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,4 +33,10 @@ Route::get('/Apropos',[Apropos::class,'Apropos'])->name('apropos');
 // contact
 
 Route::get('/Contact',[ContactController::class,'FormulaireContact'])-> name('contact');
+Route::post('/Contact',[ContactController::class,'RecupDataContact']);
+
+//service 
+
+Route::get('/Service',[ServiceController::class,'Service'])-> name('service');
+
 
