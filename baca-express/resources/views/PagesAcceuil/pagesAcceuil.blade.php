@@ -19,7 +19,7 @@
 <div class="sm:mt-32 mt-5">
     <div class="container mx-auto px-10 flex justify-center">
         <div class="lg:flex lg:space-x-4 justify-center w-full md:w-1/2 lg:w-full">
-            <div class="w-full text-center border border-gray-300 rounded">
+            <div class="w-full  border border-gray-300 rounded">
                 <a href="#">
                     <button class="px-2 py-5 border border-gray-300 rounded w-full">
                         <span class="px-5">&#x2635;</span> Consultez votre reservation

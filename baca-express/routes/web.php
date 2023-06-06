@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/','/Home');
 
-Route::get('/',[AcceuilController::class,'PageAceuil'])->name('Home');
+Route::get('/',[AcceuilController::class,'PageAceuil']);
 Route::get('/Home',[AcceuilController::class,'PageAceuil'])->name('Home');
 
 Route::post('/Home',[AcceuilController::class,'Recherche']);

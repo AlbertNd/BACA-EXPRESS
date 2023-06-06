@@ -17,7 +17,7 @@
                     <!-- le ville de départ et ville destination -->
                     <div class="sm:flex sm:space-x-2 w-full">
                         <!--Ville départ -->
-                        <div class="w-full">
+                        <div class="hidden sm:block w-full">
                             <label for="depart">De</label> <br>
                             <select name="depart" id="depart" class="w-full">
                                 @foreach($villeDepart as $villes)
