@@ -46,10 +46,9 @@ class AcceuilController extends Controller
 
         return view('InfoHoraire.Horaire', [
             'pays' => pays::with([
-                'ville' => function ($q) use ($villeDeDepart) {
-
-                    $q->where('nom', $villeDeDepart);
-                },
+                'ville'=> function($q) use($villeDeDepart){
+                $q->where('nom',$villeDeDepart);
+            },
             ])->where('id',$IdPaysDepart)->get(),
 
             
@@ -57,6 +56,7 @@ class AcceuilController extends Controller
 
             'villeDepart' => ville::select('id', 'nom')->where('pays_id', '=', 1)->get(),
             'villeArrive'  => ville::select('id', 'nom')->where('pays_id', '=', 2)->get(),
+            'nombre' => $nombre,
             'prix' => $nombre * 5,
             'destination' => $destination,
             'depart' => $depart,

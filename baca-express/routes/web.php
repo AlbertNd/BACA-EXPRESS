@@ -23,10 +23,17 @@ Route::redirect('/','/Home');
 Route::get('/',[AcceuilController::class,'PageAceuil']);
 Route::get('/Home',[AcceuilController::class,'PageAceuil'])->name('Home');
 
+// Recuperation des request pour la page recherche
 Route::post('/Home',[AcceuilController::class,'Recherche']);
+
+
 Route::get('/Horaire',[AcceuilController::class,'Recherche'])->name('horaire');
 
+// ####### Reservation #####
+// Affichage du formulaire de reservation 
 Route::get('/Reservation',[ReservationController::class,'AfficherReservation'])->name('reservation');
+// Recuperation des request du choix des horaires 
+Route::post('/Reservation',[ReservationController::class,'AfficherReservation']);
 
 Route::get('/Apropos',[Apropos::class,'Apropos'])->name('apropos');
 
