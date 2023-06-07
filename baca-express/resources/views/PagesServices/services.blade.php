@@ -7,9 +7,9 @@
         <div class="flex justify-center p-10">
             <h1 class="text-2xl font-thin uppercase"> Les Services </h1>
         </div>
-        <div class="flex flex-wrap justify-center">
+        <div class="md:flex flex-wrap justify-center">
             <!--demande remboursement-->
-            <div class="p-5 w-1/2 mx-auto">
+            <div class="p-2 md:p-5 md:w-1/2 mx-auto">
                 <div class="border border-gray-300">
                     <!--Titre-->
                     <div class="p-5 flex justify-center items-center bg-green-500">
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <!--marchandise et bagage-->
-            <div class="p-5 w-1/2">
+            <div class="p-2 md:p-5 md:w-1/2 mx-auto">
                 <div class="border border-gray-300">
                     <!--Titre-->
                     <div class="p-5 flex justify-center items-center bg-green-500">
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <!--Modification de la reservation-->
-            <div class="p-5 w-1/2">
+            <div class="p-2 md:p-5 md:w-1/2 mx-auto">
                 <div class="border border-gray-300">
                     <!--Titre-->
                     <div class="p-5 flex justify-center items-center bg-green-500">
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <!--Probleme de paiement-->
-            <div class="p-5 w-1/2">
+            <div class="p-2 md:p-5 md:w-1/2 mx-auto">
                 <div class="border border-gray-300">
                     <!--Titre-->
                     <div class="p-5 flex justify-center items-center bg-green-500 ">
@@ -97,7 +97,7 @@
                 </div>
             </div>
             <!-- Passager en situation d'handicap-->
-                <div class="p-5 w-1/2">
+                <div class="p-2 md:p-5 md:w-1/2 mx-auto">
                     <div class="border border-gray-300">
                         <!--Titre-->
                         <div class="p-5 flex justify-center items-center bg-green-500 ">
@@ -121,7 +121,7 @@
         
             <!-- Reserver une place -->
             
-                <div class="p-5 w-1/2">
+                <div class="p-2 md:p-5 md:w-1/2 mx-auto">
                     <div class="border border-gray-300">
                         <!--Titre-->
                         <div class="p-5 flex justify-center items-center bg-green-500 ">

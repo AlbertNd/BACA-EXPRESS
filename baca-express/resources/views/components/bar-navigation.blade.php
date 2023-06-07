@@ -21,9 +21,9 @@
         <div class="absolute hidden sm:hidden transition duration-300 mobile-menu bg-green-500 w-full">
             <div class="p-2">
                 <ul class="font-medium text-white text-xs font-serif uppercase space-y-1">
-                    <li><a href="#" class="flex py-2 px-2 w-full justify-center border border-yellow-500 rounded"> A propos </a> </li>
-                    <li><a href="#" class="flex py-2 px-2 w-full justify-center border border-yellow-500 rounded">Services </a></li>
-                    <li><a href="#" class="flex py-2 px-2 w-full justify-center border border-yellow-500 rounded">Contact</a></li>
+                    <li><a href="{{route('apropos')}}" class="flex py-2 px-2 w-full justify-center border border-yellow-500 rounded"> A propos </a> </li>
+                    <li><a href="{{route('service')}}" class="flex py-2 px-2 w-full justify-center border border-yellow-500 rounded">Services </a></li>
+                    <li><a href="{{route('contact')}}" class="flex py-2 px-2 w-full justify-center border border-yellow-500 rounded">Contact</a></li>
                     <li><a href="#" class="flex py-2 px-2 w-full justify-center border border-yellow-500 rounded">Langues</a></li>
                 </ul>
             </div>            

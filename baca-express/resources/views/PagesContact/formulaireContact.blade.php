@@ -6,17 +6,17 @@
     <div class="flex justify-center items-center p-10">
         <h1 class="font-thin uppercase text-2xl text-green-800">Besoin d'aide ? Contactez-nous sans hésiter !</h1>
     </div>
-    <div class="flex space-x-2 ">
+    <div class="flex md:space-x-2 m-2">
         <!-- Description -->
-        <div class="w-full shadow rounded">
+        <div class="hidden md:block w-full shadow rounded">
             @include('PagesContact.textFormulaireContact')
         </div>
         <!-- formulaire de contact -->
-        <div class="w-full p-5 bg-green-500">
+        <div class="w-full p-2 mx-auto md:p-5 bg-green-500">
             <div class="">
                 <form action="" method="post">
                     <!-- le nom et le prenom -->
-                    <div class="flex space-x-4">
+                    <div class="sm:flex sm:space-x-4">
                         <div class="w-full">
                             <div>
                                 <label for="nom" class="font-bold font-serif text-sm text-white">Nom</label>
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <!-- telephone et adresse mail -->
-                    <div class="flex space-x-4">
+                    <div class="sm:flex sm:space-x-4">
                         <div class="w-full">
                             <div>
                                 <label for="telephone" class="font-bold font-serif text-sm text-white">Telephone</label>
