@@ -30,10 +30,10 @@ Route::post('/Home',[AcceuilController::class,'Recherche']);
 Route::get('/Horaire',[AcceuilController::class,'Recherche'])->name('horaire');
 
 // ####### Reservation #####
-// Affichage du formulaire de reservation 
-Route::get('/Reservation',[ReservationController::class,'AfficherReservation'])->name('reservation');
 // Recuperation des request du choix des horaires 
 Route::post('/Reservation',[ReservationController::class,'AfficherReservation']);
+// Affichage du formulaire de reservation 
+Route::get('/Reservation',[ReservationController::class,'AfficherReservation'])->name('reservation');
 
 Route::get('/Apropos',[Apropos::class,'Apropos'])->name('apropos');
 

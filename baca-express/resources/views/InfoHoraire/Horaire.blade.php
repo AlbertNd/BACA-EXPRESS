@@ -4,7 +4,7 @@
 
 
 <div class="container mx-auto p-2">
-    <div class="container mx-auto sm:top-10 bg-white border border-gray-300 rounded shadow">
+    <div class="hidden sm:block container mx-auto sm:top-10 bg-white border border-gray-300 rounded shadow">
         @include('PagesAcceuil.SectionPageAcceuil.FormulaireReservation')
     </div>
 </div>
@@ -21,7 +21,7 @@
 
 
     @foreach($pays as $pays)
-    <form action="/Reservation" method="post">
+    <form action="" method="post">
         @csrf
         <div class="justify-center my-4 px-3">
             <!-- Le nom du pays de depart -->
@@ -51,28 +51,28 @@
                 @foreach($villes -> horaire as $horaire)
                 <div class="sm:flex border border-gray-300 p-3">
                     <!-- Les date -->
-                    <div class="w-full font-bold font-serif uppercase">
+                    <div class="w-full sm:w-1/5 font-bold font-serif uppercase text-center">
                         <h1 class="font-light text-sm font-serif lowercase">Date de depart : </h1>
-                        <input type="text" name="dateDepartHoraire" id="" value="{{$horaire -> dateDepart}}" class="border border-white">
+                        <input type="text" name="dateDepartHoraire" id="" value="{{$horaire -> dateDepart}}" class="border border-white text-center">
                     </div>
                     <!-- Les heures -->
-                    <div class="w-full font-bold font-serif uppercase">
+                    <div class="w-full sm:w-1/5 font-bold font-serif uppercase text-center">
                         <h1 class="font-light text-sm font-serif lowercase">Heure de depart :</h1>
-                        <input type="text" name="heureDepartHoraire" id="" value="{{$horaire -> heureDepart}}" class="border border-white">
+                        <input type="text" name="heureDepartHoraire" id="" value="{{$horaire -> heureDepart}}" class="border border-white text-center">
                     </div>
                     <!-- nombre de billet -->
-                    <div class="w-full font-bold font-serif uppercase">
+                    <div class="w-full sm:w-1/5 font-bold font-serif uppercase text-center">
                         <h1 class="font-light text-sm font-serif lowercase"> nombre de billet</h1>
-                        <input type="text" name="nombreBilletDepartHorraire" id="" value="{{$nombre}}" class="border border-white">
+                        <input type="text" name="nombreBilletDepartHorraire" id="" value="{{$nombre}}" class="border border-white text-center">
                     </div>
                     <!-- le prix -->
-                    <div class="w-full font-bold font-serif uppercase">
+                    <div class="w-full sm:w-1/5 font-bold font-serif uppercase text-center">
                         <h1 class="font-light text-sm font-serif lowercase"> Prix / <span>FCFA</span></h1>
-                        <input type="text" name="prixDepartHorraire" id="" value="{{$prix}}" class="border border-white">
+                        <input type="text" name="prixDepartHorraire" id="" value="{{$prix}}" class="border border-white text-center">
                     </div>
 
-                    <div class="w-full flex justify-center">
-                        <button class="px-2 py-2 border border-gray-300 bg-yellow-500 rounded">
+                    <div class="w-full sm:w-1/5 flex justify-center mx-auto">
+                        <button class="w-full px-2 py-2 border border-gray-300 bg-yellow-500 rounded">
                             Reservation <span>&#x27AA;</span>
                         </button>
                     </div>

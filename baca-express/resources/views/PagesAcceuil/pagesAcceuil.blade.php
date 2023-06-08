@@ -10,8 +10,8 @@
             </div>
         </div>
         <!-- la section des information de voyage -->
-        <div class="sm:absolute container mx-auto sm:top-72 bg-white border border-gray-300 rounded shadow-2xl">
-        @include('PagesAcceuil.SectionPageAcceuil.FormulaireReservation')
+        <div class=" h-screen sm:h-fit sm:absolute  container mx-auto sm:top-72 bg-white border border-gray-300 rounded shadow-2xl">
+            @include('PagesAcceuil.SectionPageAcceuil.FormulaireReservation')
         </div>
     </div>
 </div>

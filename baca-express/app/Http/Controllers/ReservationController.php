@@ -21,4 +21,8 @@ class ReservationController extends Controller
             'prixAchat' => $request -> prixDepartHorraire 
         ]);
     }
+
+    public function recupeReservation(Request $request){
+        return "C'est bon";
+    }
 }
