@@ -35,14 +35,14 @@ class AcceuilController extends Controller
         $DateUtilisateur = $request -> dateDepart;
         // Recupération du pays de depart dansla db
         $PaysDepart =ville::select('pays_id')->where('nom',$villeDeDepart)->get();
-        $IdPaysDepart = $PaysDepart[0]-> pays_id;
+        $IdPaysDepart = $PaysDepart[0] -> pays_id;
 
         // Recupération des superieur ou egale à celle d'aujourdhuit dans la db 
 
         $IdVilDateSupDateUti = Horaire::select('dateDepart')->where('dateDepart','>=',$DateUtilisateur)->get();
         
         
-        //dd($IdVilDateSupDateUti);
+        //dd($IdPaysDepart);
 
         return view('InfoHoraire.Horaire', [
             'pays' => pays::with([

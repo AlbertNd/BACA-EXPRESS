@@ -21,7 +21,7 @@
 
 
     @foreach($pays as $pays)
-    <form action="" method="post">
+    <form action="{{route('postreservation')}}" method="post">
         @csrf
         <div class="justify-center my-4 px-3">
             <!-- Le nom du pays de depart -->

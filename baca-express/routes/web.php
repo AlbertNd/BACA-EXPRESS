@@ -31,7 +31,7 @@ Route::get('/Horaire',[AcceuilController::class,'Recherche'])->name('horaire');
 
 // ####### Reservation #####
 // Recuperation des request du choix des horaires 
-Route::post('/Reservation',[ReservationController::class,'AfficherReservation']);
+Route::post('/Reservation',[ReservationController::class,'AfficherReservation'])->name('postreservation');
 // Affichage du formulaire de reservation 
 Route::get('/Reservation',[ReservationController::class,'AfficherReservation'])->name('reservation');
 
