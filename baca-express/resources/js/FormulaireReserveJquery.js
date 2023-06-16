@@ -17,7 +17,7 @@ $(document).ready(function () {
                 //console.log(data);
                 
                 $SelectIDVilleDepart.html(
-                    '<option value="" selected>Choisir une ville de destination </option>'
+                    '<option value="" selected>Choisir de depart </option>'
                 );
                 $.each(data, function (id, value) {
                     // ajouts des balises (pas oublier le nom de la colone souhaité : name "pour le nom des villes")
