@@ -16,11 +16,13 @@ class AcceuilController extends Controller
     }
     public function PageAceuil()
     {
-
-        return view('PagesAcceuil.pagesAcceuil', [
-            'villeDepart' => ville::select('id', 'nom')->where('pays_id', '=', 1)->get(),
-            'villeArrive'  => ville::select('id', 'nom')->where('pays_id', '=', 2)->get()
-        ]);
+        /* 
+        | Section du formaire de reserve : 
+        |  => Le formulaire de reserve est include dans la page d'acceuille. (donc pas de route spécifique et donc pas de fonction pour la retourne)     
+        */
+        // La liste des pays dans le formulaire
+        $pays = pays::all();
+        return view('PagesAcceuil.pagesAcceuil',['pays' => $pays]);
     }
 
     //la partie opérationnel du formulaire de recherche pour les horaire et les reservations 
@@ -50,10 +52,6 @@ class AcceuilController extends Controller
                 $q->where('nom',$villeDeDepart);
             },
             ])->where('id',$IdPaysDepart)->get(),
-
-            
-
-
             'villeDepart' => ville::select('id', 'nom')->where('pays_id', '=', 1)->get(),
             'villeArrive'  => ville::select('id', 'nom')->where('pays_id', '=', 2)->get(),
             'nombre' => $nombre,

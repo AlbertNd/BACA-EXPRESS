@@ -11,7 +11,7 @@
         </div>
         <!-- la section des information de voyage -->
         <div class=" h-screen sm:h-fit sm:absolute  container mx-auto sm:top-72 bg-white border border-gray-300 rounded shadow-2xl">
-            @include('PagesAcceuil.SectionPageAcceuil.FormulaireReservation')
+            @include('PagesAcceuil.SectionFormulaireReserveBillet.FormulaireReservation')
         </div>
     </div>
 </div>

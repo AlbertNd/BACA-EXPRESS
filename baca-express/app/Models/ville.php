@@ -17,6 +17,7 @@ class ville extends Model
     public function pays(): BelongsTo{
         return $this-> belongsTo(pays::class);
     }
+    
     public function horaire():HasMany{
         return $this-> hasMany(Horaire::class);
     }

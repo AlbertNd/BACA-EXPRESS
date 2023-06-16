@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  @vite(['resources/css/app.css','resources/js/FormulaireRecherche.js','resources/js/Menuhamburger.js'])
+  @vite(['resources/css/app.css','resources/js/FormulaireRecherche.js','resources/js/Menuhamburger.js','resources/js/FormulaireReserveJquery.js'])
 </head>
 
 <body>
@@ -29,6 +29,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </body>
 
 </html>

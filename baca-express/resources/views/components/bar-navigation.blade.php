@@ -13,7 +13,7 @@
                 </button>
             </div>
             <div class="flex justify-center items-center w-full">
-                <a href="{{route('Home')}}">
+                <a href="{{route('HomeAcceuille')}}">
                     <h1 class="font-extrabold uppercase text-white text-2xl">Baca-Express</h1>
                 </a>
             </div>
@@ -33,14 +33,14 @@
         <div class="hidden sm:grid grid-rows lg:grid-cols-4 gap-4">
             <!--le logo -->
             <div class="flex justify-center items-center">
-                <a href="{{route('Home')}}">
+                <a href="{{route('HomeAcceuille')}}">
                     <h1 class="font-extrabold uppercase text-white text-2xl">Baca-Express</h1>
                 </a>
             </div>
             <!-- les liens -->
             <div class="flex justify-center lg:col-span-2">
                 <ul class="flex space-x-8 text-white font-medium font-serif text-sm uppercase">
-                    <li class="inline-block flex justify-center rounded hover:bg-gray-400 hover:bg-opacity-25"><a href="{{route('Home')}}" class="py-5 px-2">Acceuil</a></li>
+                    <li class="inline-block flex justify-center rounded hover:bg-gray-400 hover:bg-opacity-25"><a href="{{route('HomeAcceuille')}}" class="py-5 px-2">Acceuil</a></li>
                     <li class="inline-block flex justify-center rounded hover:bg-gray-400 hover:bg-opacity-25"><a href="{{route('apropos')}}" class="py-5 px-2">A propos</a></li>
                     <!--Liens pour les services -->
                     <li class="inline-block py-5 px-2 rounded hover:bg-gray-400 hover:bg-opacity-25"><a href="#">Services <span class="px-1"> &#x23F7;</span> </a>
