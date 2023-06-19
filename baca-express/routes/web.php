@@ -1,13 +1,16 @@
 <?php
 
-use App\Http\Controllers\AcceuilController;
+use App\Models\Horaire;
 use App\Http\Controllers\Apropos;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AcceuilController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\ControllerFormulaireReserveBillet;
+use App\Http\Controllers\controllerHoraire;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ControllerVilleDepart;
 use App\Http\Controllers\ReservationController;
-use App\Http\Controllers\ServiceController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ControllerVilleDestination;
+use App\Http\Controllers\ControllerFormulaireReserveBillet;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +35,14 @@ Route::get('/Home',[AcceuilController::class,'PageAceuil'])->name('HomeAcceuille
 Route::post('Villes',[ControllerFormulaireReserveBillet::class,'listeVille'])->name('RoutelisteVille');
 // Insertion des pays de destination dans le formaulaire
 Route::post('Pays',[ControllerVilleDepart::class,'listePaysDestination'])->name('RoutelistePaysDestination');
+// Insertion des villes de destination 
+Route::post('VilesDestination',[ControllerVilleDestination::class,'listeVIlleDestination'])->name('RoutelisteVilleDestination');
 
-
+/*
+| Les horaire 
+*/
+// Recapitulation des information de voyage et liste de prochainne depart et retour
+Route::post('/Horaire',[controllerHoraire::class,'Recherche'])->name('horaire');
 
 
 
@@ -41,7 +50,6 @@ Route::post('Pays',[ControllerVilleDepart::class,'listePaysDestination'])->name(
 //Route::post('/Home',[AcceuilController::class,'Recherche']);
 
 
-Route::get('/Horaire',[AcceuilController::class,'Recherche'])->name('horaire');
 
 // ####### Reservation #####
 // Recuperation des request du choix des horaires 
