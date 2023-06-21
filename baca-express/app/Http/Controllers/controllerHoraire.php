@@ -13,11 +13,10 @@ class controllerHoraire extends Controller
     public function Recherche(Request $request)
     {
 
-       // dd($request);
+        //dd($request);
 
         $statusVoyage = $request->AllerRetour;
         $villeDestination = $request->SelectNameVilleDestination;;
-        $dateDepart = $request->InputNameDateDepart;
         $dateRetour = $request->InputNameDateRetour;
         
         // recuperation du pays de depart dans la db via le l'id 
@@ -26,11 +25,21 @@ class controllerHoraire extends Controller
         // recuperation du pays de destination dans la db via le l'id
         $IdpaysDestination = $request->SelectNamePaysDestination;
         $paysDest = pays::where('id',$IdpaysDestination)->get();
-        // les horaires en fonction des villes 
+        // les horaires en fonction des villes et de la date de depart 
         $villeDepart = $request->SelectNameVilleDepart;
-        $villes = ville::with('Horaire')->get();
+        $dateDepart = $request->InputNameDateDepart;
+        $villes = ville::where('nom',$villeDepart)->with([
+            'horaire' => function($q)use($dateDepart){
+                $q->where('dateDepart','>=',$dateDepart)->orderBy('dateDepart','asc');
+            }
+        ])->get();
+        // Le nombre de reservation et prix des billes 
+        $nombreDeReservation = $request -> nombreReservation;
+        $prix = $nombreDeReservation * 25000;
+        // le prix en ligne 
+        $prixLigne = $nombreDeReservation * 25000 - 2500;
 
 
-        return view('InfoHoraire.Horaire', compact('statusVoyage','villeDepart','villeDestination','paysDep','paysDest','villes'));
+        return view('InfoHoraire.Horaire', compact('statusVoyage','villeDepart','villeDestination','paysDep','paysDest','villes','nombreDeReservation','prix','prixLigne'));
     }
 }

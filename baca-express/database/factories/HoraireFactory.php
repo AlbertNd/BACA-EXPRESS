@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,9 +17,15 @@ class HoraireFactory extends Factory
      */
     public function definition(): array
     {
+
+        $startDate = now();
+        $endDate = $startDate->copy()->addYear();
+
+        $date = $this->faker->unique()->dateTimeBetween($startDate, $endDate)->format('Y-m-d');
+        
         return [
-            'Ville_id' => 8,
-            'dateDepart' => fake()->date('Y-m-d'),
+            'Ville_id' => 7,
+            'dateDepart' => $date,
             'heureDepart' => fake()->time('H:i:s'),
         ];
     }
