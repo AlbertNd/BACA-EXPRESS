@@ -47,7 +47,6 @@
         </div>
     </div>
 
-
     <!--######## Le contenu des horaires #######--->
 
     @foreach($villes as $villes)
@@ -55,7 +54,7 @@
         <!-- #### Section des horaire disponibles #### -->
         <div class="flex flex-wrap justify-center">
             @foreach($villes -> horaire as $horaires)
-            <div class="min-w-full md:min-w-[45%] border border-gray-300 rounded m-3">
+            <div class="min-w-full md:min-w-[45%] border border-green-300 rounded m-3 p-2">
                 <!--## information sur la date et l'heure de depart ##-->
                 <div class="flex space-x-3 p-3 border-b border-gray-300 bg-green-400">
                     <!-- Date de depart-->
