@@ -56,7 +56,7 @@
             @foreach($villes -> horaire as $horaires)
             <div class="min-w-full md:min-w-[45%] border border-green-300 rounded m-3 p-2">
                 <!--## information sur la date et l'heure de depart ##-->
-                <div class="flex space-x-3 p-3 border-b border-gray-300 bg-green-400">
+                <div class="flex space-x-3 p-3 border-b border-red-300 bg-green-400">
                     <!-- Date de depart-->
                     <div class="w-full">
                         <h1 class="font-thin font-serif text-xs uppercase italic">Date de départ</h1>
@@ -88,7 +88,7 @@
                     <!-- Ville d'arrivée -->
                     <div class="w-full flex justify-center">
                         <div>
-                            <h1 class="font-thin font-serif text-xs uppercase italic">Ville de départ </h1>
+                            <h1 class="font-thin font-serif text-xs uppercase italic">Ville de destination </h1>
                             <div class="font-semibold font-serif text-md uppercase">
                                 {{$villeDestination}}
                             </div>
